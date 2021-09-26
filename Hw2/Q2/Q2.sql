@@ -1,0 +1,10 @@
+DROP TABLE rdata;
+
+CREATE TABLE rdata(
+	id SERIAL PRIMARY KEY,
+	a varchar(5) UNIQUE NOT NULL,
+	b varchar(5) UNIQUE NOT NULL,
+	moment DATE DEFAULT '2020-01-01 ();',
+	x NUMERIC(5,2) CHECK(x>0)
+);
+
