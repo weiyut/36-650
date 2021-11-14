@@ -32,6 +32,7 @@ class Node:
         if self.small:
             self.small.traversal()
         if self.data:
+            #skip the node if its empty#
             print(self.data)
         if self.big:
             self.big.traversal()
@@ -41,9 +42,6 @@ class Node:
     def delete(self, data):
         if data == self.data:
             self.data = None
-            self.small = None
-            self.big = None
-            self.too_big = None
                 
         elif data < self.data:
             if self.small:
@@ -70,6 +68,9 @@ print('Tree contents after deleting 45 using the traversal():')
 
 root.traversal()
 
+root.delete(20)
+print('Tree contents after deleting 45 and 20 using the traversal():')
+root.traversal()
 
 
 
